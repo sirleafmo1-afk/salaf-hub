@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pocket Football Clash</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Pocket Football Clash</h1>
+      <p class="subtitle">Arcade football inspired by FC Mobile & eFootball</p>
+    </header>
+
+    <section class="hud">
+      <div class="scoreboard">
+        <span id="home-name">HOME</span>
+        <strong id="score">0 - 0</strong>
+        <span id="away-name">AWAY</span>
+      </div>
+      <div class="meta">
+        <span id="clock">00:00</span>
+        <span id="status">Press Start Match</span>
+      </div>
+    </section>
+
+    <section class="setup-panel" id="setup-panel">
+      <label>
+        Home Team
+        <input id="home-input" type="text" maxlength="14" value="Falcons" />
+      </label>
+      <label>
+        Away Team
+        <input id="away-input" type="text" maxlength="14" value="Tigers" />
+      </label>
+      <label>
+        Difficulty
+        <select id="difficulty">
+          <option value="0.7">Amateur</option>
+          <option value="1" selected>Pro</option>
+          <option value="1.35">Legend</option>
+        </select>
+      </label>
+      <button id="start-btn">Start Match</button>
+      <p class="controls-info">Move: WASD / Arrows • Shoot/Tackle: Space • Sprint: Shift • Pause: P</p>
+    </section>
+
+    <section class="field-wrap">
+      <canvas id="pitch" width="960" height="560" aria-label="Football pitch"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
